@@ -9,8 +9,8 @@ class ModelTests(TestCase):
         email = 'test@arkdev.com'
         password = 'Welcome123'
         user = get_user_model().objects.create_user(
-            email = email,
-            password = password
+            email=email,
+            password=password
         )
         self.assertEqual(user.email, email)
         self.assertTrue(user.check_password(password))
